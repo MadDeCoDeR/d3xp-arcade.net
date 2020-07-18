@@ -20,10 +20,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
+using System.Threading.Tasks;
+
 namespace d3xp_arcadenet.file
 {
     interface FileTransfer
     {
-        void transferFiles(string d3path, string bfgpath);
+        Task<bool> transferFiles(string d3path, string bfgpath, int scaling);
     }
 }

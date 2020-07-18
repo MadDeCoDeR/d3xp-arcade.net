@@ -22,6 +22,7 @@ SOFTWARE.
 */
 using d3xp_arcadenet.file;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace d3xp_arcadenet
@@ -32,13 +33,14 @@ namespace d3xp_arcadenet
         private string d3path;
         private string bfgpath;
         private string bfgfolder;
+        private int imageScaling;
         public Form1()
         {
             InitializeComponent();
             transfer = new FileTransferImpl();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private async void Button1_Click(object sender, EventArgs e)
         {
             if (d3path == null || d3path.Equals("")) {
                 printToUi("Please set Doom 3 Installation directory");
@@ -57,7 +59,9 @@ namespace d3xp_arcadenet
             bfgpath += bfgfolder;
             try
             {
-                transfer.transferFiles(d3path, bfgpath);
+                printToUi("Instalation in Progress... Please wait");
+                Task<bool> transferTask = transfer.transferFiles(d3path, bfgpath, imageScaling);
+                await Task.WhenAny(transferTask);
             }catch(Exception ex)
             {
                 printToUi(ex.Message);

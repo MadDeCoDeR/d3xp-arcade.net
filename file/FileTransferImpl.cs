@@ -22,6 +22,7 @@ SOFTWARE.
 */
 using d3xp_arcadenet.Properties;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace d3xp_arcadenet.file
 {
@@ -29,10 +30,11 @@ namespace d3xp_arcadenet.file
     {
         private FileExtractor exporter;
 
-        public void transferFiles(string d3path, string bfgpath)
+        public async Task<bool> transferFiles(string d3path, string bfgpath, int scaling)
         {
+            await Task.Run(() => {
             exporter = new FileExtractorImpl(d3path + "/pak000.pk4");
-            foreach(string key in Paths.paths.Keys)
+            foreach (string key in Paths.paths.Keys)
             {
                 string currentPath = bfgpath + "/" + key;
                 Directory.CreateDirectory(currentPath);
@@ -52,7 +54,8 @@ namespace d3xp_arcadenet.file
                 {
                     exporter.extractFiles(path, key, currentPath);
                 }
-            }
+            } });
+            return true;
         }
     }
 }
