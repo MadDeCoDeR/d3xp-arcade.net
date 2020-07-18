@@ -52,7 +52,7 @@ namespace d3xp_arcadenet.file
             zipfile = ZipFile.OpenRead(path);
         }
 
-        public void extractFiles(string archievedFile, string relativePath, string OutputPath)
+        public void extractFiles(string archievedFile, string relativePath, string OutputPath, int scaling)
         {
             foreach( ZipArchiveEntry entry in zipfile.Entries)
             {
@@ -72,7 +72,7 @@ namespace d3xp_arcadenet.file
                         }
                         if (!skip)
                         {
-                            int multiplier = 8;
+                            int multiplier = scaling;
                             TGA image = new TGA(path);
                             ImageScaler scaler = new ImageScalerImpl();
                             scaler.ResizeImage(image.ToBitmap(), image.Width * multiplier, image.Height * multiplier, path);

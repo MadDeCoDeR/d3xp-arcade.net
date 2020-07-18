@@ -38,6 +38,11 @@ namespace d3xp_arcadenet
         {
             InitializeComponent();
             transfer = new FileTransferImpl();
+            imageScaling = 1;
+            hScrollBar1.Maximum = 41;
+            hScrollBar1.Minimum = 1;
+            hScrollBar1.Value = imageScaling;
+            label8.Text = "x" + imageScaling;
         }
 
         private async void Button1_Click(object sender, EventArgs e)
@@ -101,6 +106,12 @@ namespace d3xp_arcadenet
         private void printToUi(string message)
         {
             label5.Text = message;
+        }
+
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            imageScaling = hScrollBar1.Value;
+            label8.Text = "x" + imageScaling;
         }
     }
 }

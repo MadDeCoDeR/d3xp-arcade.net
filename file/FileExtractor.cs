@@ -24,6 +24,6 @@ namespace d3xp_arcadenet.file
 {
     interface FileExtractor
     {
-        void extractFiles(string archievedFile, string relativePath, string OutputPath);
+        void extractFiles(string archievedFile, string relativePath, string OutputPath, int scaling);
     }
 }

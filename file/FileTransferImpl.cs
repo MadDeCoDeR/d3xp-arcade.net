@@ -47,12 +47,12 @@ namespace d3xp_arcadenet.file
                 }
                 if (Paths.paths[key][0].EndsWith(".gui"))
                 {
-                    exporter.extractFiles(Paths.paths[key][0], "guis", currentPath);
+                    exporter.extractFiles(Paths.paths[key][0], "guis", currentPath, scaling);
                     continue;
                 }
                 foreach (string path in Paths.paths[key])
                 {
-                    exporter.extractFiles(path, key, currentPath);
+                    exporter.extractFiles(path, key, currentPath, scaling);
                 }
             } });
             return true;

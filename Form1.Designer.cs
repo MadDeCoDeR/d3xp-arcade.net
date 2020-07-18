@@ -63,11 +63,14 @@ namespace d3xp_arcadenet
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(89, 227);
+            this.button1.Location = new System.Drawing.Point(89, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -77,21 +80,21 @@ namespace d3xp_arcadenet
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 155);
+            this.textBox1.Location = new System.Drawing.Point(12, 205);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(282, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 201);
+            this.textBox2.Location = new System.Drawing.Point(12, 251);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(282, 20);
             this.textBox2.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(301, 155);
+            this.button2.Location = new System.Drawing.Point(301, 205);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(25, 19);
             this.button2.TabIndex = 3;
@@ -101,7 +104,7 @@ namespace d3xp_arcadenet
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(301, 201);
+            this.button3.Location = new System.Drawing.Point(301, 251);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(25, 19);
             this.button3.TabIndex = 4;
@@ -112,7 +115,7 @@ namespace d3xp_arcadenet
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 136);
+            this.label1.Location = new System.Drawing.Point(12, 186);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 5;
@@ -121,7 +124,7 @@ namespace d3xp_arcadenet
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 181);
+            this.label2.Location = new System.Drawing.Point(12, 231);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 13);
             this.label2.TabIndex = 6;
@@ -173,7 +176,7 @@ namespace d3xp_arcadenet
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 286);
+            this.label5.Location = new System.Drawing.Point(72, 318);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 11;
@@ -187,11 +190,39 @@ namespace d3xp_arcadenet
             this.label6.TabIndex = 12;
             this.label6.Text = "Installation Method";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 128);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Image Scaling";
+            // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Location = new System.Drawing.Point(12, 155);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(175, 17);
+            this.hScrollBar1.TabIndex = 14;
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(93, 128);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(0, 13);
+            this.label8.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 340);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.hScrollBar1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -231,6 +262,9 @@ namespace d3xp_arcadenet
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
+        private System.Windows.Forms.Label label8;
     }
 }
 
