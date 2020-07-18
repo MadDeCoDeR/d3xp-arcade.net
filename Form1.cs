@@ -95,7 +95,7 @@ namespace d3xp_arcadenet
 
         private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            bfgfolder = "/d3xp-arcade";
+            bfgfolder = "/d3xp_arcade";
         }
 
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
