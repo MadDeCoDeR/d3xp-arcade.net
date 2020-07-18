@@ -35,7 +35,9 @@ namespace d3xp_arcadenet.file
         private List<string> excludeResizePaths = new List<string>
         {
             { "guis/assets/bustout"},
-            {"guis/assets/bearshoot/sliderthumb" }/*,
+            {"guis/assets/bearshoot/sliderthumb" },
+            { "textures/particles/fball2_strip"},
+            { "textures/particles/flame2_strip"}/*,
             {"guis/assets/bearshoot/sarge" },
             {"guis/assets/bearshoot/turret" },
             {"guis/assets/bearshoot/wind" },
