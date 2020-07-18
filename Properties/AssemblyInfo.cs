@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("d3xp-arcadenet")]
-[assembly: AssemblyCopyright("Copyright(C) 2019 George Kalmpokis under MIT License")]
+[assembly: AssemblyCopyright("Copyright(C) 2020 George Kalmpokis under MIT License")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
